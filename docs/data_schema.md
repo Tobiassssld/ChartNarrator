@@ -771,7 +771,7 @@ Condition-specific prompt variants:
 | Text-Only | no | yes | yes |
 | Zero-Shot | yes | yes | no |
 
-Historical prediction outputs may contain Colab absolute image paths such as `/content/drive/MyDrive/.../data/images/<file>.png`. Public scripts and docs should prefer repository-relative image paths, but downstream evaluation should resolve by basename where possible.
+Historical prediction outputs may contain local absolute image paths. Repository files should use relative paths such as `data/images/<file>.png`, and downstream evaluation should resolve image references by basename where possible.
 
 Evaluated prediction files:
 
