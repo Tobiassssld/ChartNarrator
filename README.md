@@ -279,8 +279,6 @@ If you use this repository or build on ChartNarrator, please cite the forthcomin
 }
 ```
 
-Please update this entry once the final proceedings metadata, page numbers, publisher record, or DOI are available.
-
 ## License
 
 This repository is released under the MIT License. See `LICENSE` for details.
