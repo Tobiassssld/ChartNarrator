@@ -267,7 +267,7 @@ def render_chart(
 
     Notes:
         Filename prefixes, time-window boundaries, smoothing behavior, and
-        visual styles are retained to match the original experimental pipeline.
+        visual styles are kept consistent with the experimental pipeline.
     """
     rng = random if rng is None else rng
     fig = None

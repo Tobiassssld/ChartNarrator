@@ -128,7 +128,7 @@ def detect_time_granularity(period_str: Any) -> Optional[str]:
 def is_numeric_column(col_name: str) -> bool:
     """Check whether a CBS column name ends with an underscore and digits.
 
-    Retained as a helper from the original script. The configured value_col
+    Helper for selecting configured source columns. The configured value_col
     fields, rather than this naming heuristic, determine the selected series.
     """
     return bool(re.search(r"_\d+$", col_name))
@@ -235,7 +235,7 @@ def process_slice(
         df: Dataframe with parsed_date and time_granularity columns.
         dataset_name: Stable dataset identifier used in the output filename.
         slice_config: Mapping containing slice_id, value_col, and filters.
-        time_col: Original period column name, retained for compatibility.
+        time_col: Source period column name.
         output_dir: Optional output directory; defaults to OUTPUT_DIR.
 
     Returns:
@@ -303,7 +303,7 @@ def process_slice(
         LOGGER.warning("%s: no valid numeric values remain.", slice_id)
         return None
 
-    # Preserve the original mean aggregation for duplicate dates.
+    # Aggregate duplicate dates by their arithmetic mean.
     df_clean = df_filtered.groupby("parsed_date", as_index=False)["value"].mean()
 
     date_counts = df_filtered.groupby("parsed_date").size()

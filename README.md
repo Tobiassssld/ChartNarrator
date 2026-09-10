@@ -126,7 +126,7 @@ python scripts/data/generate_charts.py --seed 42
 
 This stage downloads selected CBS Open Data series, normalizes them into cleaned monthly time-series CSV files, and renders random-window chart images.
 
-The chart renderer preserves the original experimental design:
+The chart renderer follows the experimental design:
 
 - seven configured flow series use a 12-month rolling sum;
 - all other series use a 12-month moving average;
