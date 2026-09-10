@@ -5,72 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eedd968-4b3a-41f7-a227-a3b882ac45ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ChartNarrator_public.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/data_schema.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/pipeline.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/evaluated_prediction_noanchor_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/evaluated_prediction_textonly_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/evaluated_prediction_vlm_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/evaluated_prediction_zeroshot_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/filter_report_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/kappa_review_export_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/noanchor_finetune_entry_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/prediction_noanchor_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/prediction_textonly_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/prediction_vlm_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/prediction_zeroshot_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/stage1_evaluated_narrative_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/stage1_generated_narrative_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/stage2_evaluated_narrative_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/stage2_generated_narrative_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/text_representation_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/textonly_finetune_entry_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/vlm_finetune_entry_example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/stage1_control/generate_with_external_context.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/stage1_control/judge_context_comparison.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figures/anchor_schema.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figures/pipeline_overview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figures/results_comparison.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/finetuning/textonly_4_5.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/finetuning/vlm_4_5.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/finetuning/vlm_4_5_matched.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/finetuning/vlm_5_0.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/finetuning/vlm_noanchor_4_5.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/inference/zeroshot_inference.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements-train.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/data/chart_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/data/clean_cbs_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/data/fetch_cbs_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/data/generate_charts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/evaluation/judge_textonly_predictions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/evaluation/judge_vlm_predictions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/finetuning/build_text_representations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_matched_vlm_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_noanchor_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_textonly_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_vlm_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage1/analyze_quality.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage1/extract_anchors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage1/generate_narratives.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage1/judge_narratives.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage2/analyze_quality.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage2/extract_anchors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage2/extract_candidate_pool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage2/filter_candidate_pool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage2/generate_narratives.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/stage2/judge_narratives.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/validation/compute_kappa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/validation/prepare_kappa_review.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Tobiassssld"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Tobiassssld/ChartNarrator.git",
+    "accountId": "ab77ec63-884f-4d2d-8627-4a649fba2b3f"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -93,17 +40,17 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Tobias/PycharmProjects/ChartNarrator_public/examples",
+    "last_opened_file_path": "C:/Users/Tobias/PycharmProjects/ChartNarrator_public/configs",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\configs" />
       <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\examples" />
       <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\docs" />
       <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public" />
       <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\figures" />
-      <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\notebooks\inference" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\notebooks\inference" />

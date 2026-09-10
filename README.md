@@ -46,7 +46,7 @@ The final evaluation compares four conditions on the same held-out Stage 2 test 
 WA = 0.35 * MG + 0.35 * DS + 0.20 * CSC + 0.10 * SC
 ```
 
-`FC` is three-paragraph format compliance.
+`FC(Format Compliance) (%)` is three-paragraph format compliance.
 
 <p align="center">
   <img src="figures/results_comparison.png" width="850" alt="Model comparison results">
