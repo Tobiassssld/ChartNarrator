@@ -122,3 +122,4 @@ local/
 scratch/
 notes_private/
 /.gitignore
+*.xml
