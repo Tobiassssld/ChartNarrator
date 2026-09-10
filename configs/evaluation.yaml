@@ -1,0 +1,169 @@
+# ChartNarrator evaluation configuration snapshot.
+# These values summarize the scoring weights, thresholds, split settings, and
+# validation sampling used by the public scripts.
+
+stage1_judge:
+  script: "scripts/stage1/judge_narratives.py"
+  model: "gemini-2.5-flash"
+  input_dir: "data/stage1/unevaluated_labels"
+  image_root_dir: "data/images"
+  anchors_file: "data/stage1/chart_anchors_stage1.json"
+  output_dir: "data/stage1/evaluated_labels"
+  file_pattern: "narratives_cbs_*.json"
+  debug_limit: 5
+  write_sleep_seconds: 2.0
+  dimensions:
+    semantic_correctness: 0.50
+    syntactic_coverage: 0.30
+    pragmatic_appropriateness: 0.20
+
+stage1_quality_analysis:
+  script: "scripts/stage1/analyze_quality.py"
+  input_dir: "data/stage1/evaluated_labels"
+  output_dir: "data/stage1/analysis"
+  file_pattern: "evaluated_narratives_cbs_*.json"
+  samples_per_tier: 10
+  quality_thresholds:
+    high_quality:
+      weighted_avg: 4.0
+      semantic_min: 4
+      all_dimensions_min: 3
+    medium_quality:
+      weighted_avg: 3.0
+      semantic_min: 3
+      all_dimensions_min: 2
+    low_quality:
+      weighted_avg: 2.0
+      semantic_min: 2
+      all_dimensions_min: 1
+
+stage2_judge:
+  script: "scripts/stage2/judge_narratives.py"
+  model: "gemini-2.5-pro"
+  input_json: "data/stage2/unevaluated_labels/narrative_stage2_0315.json"
+  output_json: "data/stage2/evaluated_labels/evaluated_narrative_stage2_0316.json"
+  image_root_dir: "data/images"
+  anchor_file: "data/stage2/anchors/chart_anchors_stage2_v2_morph_binary_filtered.json"
+  debug_limit: 100
+  debug_per_bucket: 5
+  debug_seed: 42
+  dimensions:
+    mechanistic_grounding: 0.35
+    dependency_strength: 0.35
+    closed_system_compliance: 0.20
+    structural_coherence: 0.10
+  route_conditional_wa_thresholds:
+    simple: 3.5
+    complex: 4.5
+
+stage2_quality_analysis:
+  script: "scripts/stage2/analyze_quality.py"
+  input_json: "data/stage2/evaluated_labels/evaluated_narrative_stage2_0316.json"
+  output_dir: "data/stage2/analysis"
+  training_threshold: 4.0
+  borderline_threshold: 3.5
+  hard_floor: 2
+  output_files:
+    training_4_0: "training_set_4_0.json"
+    training_4_5: "training_set_4_5.json"
+    training_5_0: "training_set_5_0.json"
+    borderline: "borderline.json"
+    rejected: "rejected.json"
+  training_filters:
+    exclude_simple_route: true
+    exclude_anchor_borrowing: true
+    require_all_dimensions_above_hard_floor: true
+
+prediction_judge:
+  scripts:
+    vlm: "scripts/evaluation/judge_vlm_predictions.py"
+    textonly: "scripts/evaluation/judge_textonly_predictions.py"
+  model: "gemini-2.5-pro"
+  dimensions:
+    mechanistic_grounding: 0.35
+    dependency_strength: 0.35
+    closed_system_compliance: 0.20
+    structural_coherence: 0.10
+  route_conditional_wa_thresholds:
+    simple: 3.5
+    complex: 4.5
+  default_anchor_file: "data/stage2/anchors/chart_anchors_stage2_v2_morph_binary.json"
+  default_text_representation_file: "data/text_only/text_representations_4_5.json"
+  debug_limit: 5
+
+dataset_splits:
+  vlm_4_5:
+    script: "scripts/finetuning/prepare_vlm_dataset.py"
+    source: "data/stage2/analysis/training_set_4_5.json"
+    output_dir: "data/finetune_dataset_4_5"
+    split_ratios:
+      train: 0.80
+      validation: 0.10
+      test: 0.10
+    random_seed: 42
+    stratify_by: "morphology_family"
+
+  noanchor_4_5:
+    script: "scripts/finetuning/prepare_noanchor_dataset.py"
+    source: "data/stage2/analysis/training_set_4_5.json"
+    output_dir: "data/finetune_noanchor_4_5"
+    split_ratios:
+      train: 0.80
+      validation: 0.10
+      test: 0.10
+    random_seed: 42
+    stratify_by: "morphology_family"
+
+  vlm_4_5_matched:
+    script: "scripts/finetuning/prepare_matched_vlm_dataset.py"
+    source: "data/stage2/analysis/training_set_4_5.json"
+    output_dir: "data/finetune_dataset_4_5_matched"
+    shared_test_set: "data/finetune_dataset_5_0/test.json"
+    target_total: 881
+    random_seed: 42
+    morphology_counts:
+      structural_swing: 483
+      oscillatory_or_seasonal_regime: 318
+      trend_drift: 80
+
+  textonly_4_5:
+    script: "scripts/finetuning/prepare_textonly_dataset.py"
+    source_split_dir: "data/finetune_dataset_4_5"
+    text_representation_file: "data/text_only/text_representations_4_5.json"
+    output_dir: "data/finetune_textonly_4_5"
+    split_source: "uses the VLM 4.5 train/validation/test split"
+
+validation:
+  kappa_review:
+    script: "scripts/validation/prepare_kappa_review.py"
+    input_json: "data/stage2/evaluated_labels/evaluated_narrative_stage2_0316.json"
+    images: "data/images"
+    output_dir: "data/validation/stage2_kappa_review"
+    random_seed: 42
+    complex_stratum_targets:
+      A_ceiling: 20
+      B_midhigh_trend: 10
+      C_midhigh_swing: 10
+      D_midhigh_osc: 10
+      E_midlow: 8
+      F_low: 3
+      G_anchor_borrow: 12
+      H_morph_mismatch: 7
+    simple_stratum_targets:
+      S1_midhigh: 4
+      S2_midlow_upper: 6
+      S3_midlow_floor: 10
+
+  kappa_computation:
+    script: "scripts/validation/compute_kappa.py"
+    dimensions_of_interest:
+      - "DS"
+      - "SC"
+    all_dimensions:
+      - "MG"
+      - "DS"
+      - "CSC"
+      - "SC"
+    score_range:
+      min: 1
+      max: 5

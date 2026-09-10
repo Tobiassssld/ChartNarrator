@@ -1,0 +1,25 @@
+[
+  {
+    "id": "cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "image": "data/images/cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "stage2_narrative": "── Paragraph 1\nThe series for company bankruptcies began at 3042.0 in June 1993, then increased over the subsequent months to reach its highest point, a peak of 3435.0, in February 1994. Following this peak, the number of bankruptcies entered a prolonged decline, reaching a trough of 2606.0 in November 1996. The series then showed a subsequent, partial recovery, ending the observation period at 2699.0 in November 1997.\n\n── Paragraph 2\nThe initial upward movement culminates in a clear structural reversal at the peak of 3435.0 on February 1994, which interrupts the prior increase. This turning point initiates a sustained declining trajectory that carries the series to a trough of 2606.0 by Nov\n...[truncated for example]",
+    "stage2_conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata."
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe series for company bankruptcies began at 3042.0 in June 1993, then increased over the subsequent months to reach its highest point, a peak of 3435.0, in February 1994. Following this peak, the number of bankruptcies entered a prolonged decline, reaching a trough of 2606.0 in November 1996. The series then showed a subsequent, partial recovery, ending the observation period at 2699.0 in November 1997.\n\n── Paragraph 2\nThe initial upward movement culminates in a clear structural reversal at the peak of 3435.0 on February 1994, which interrupts the prior increase. This turning point initiates a sustained declining trajectory that carries the series to a trough of 2606.0 by Nov\n...[truncated for example]"
+      }
+    ],
+    "prompt_version": "stage2_260315_morphroute_v4",
+    "pattern_type": "complex",
+    "route_label": "complex",
+    "morphology_family": "structural_swing",
+    "binary_pc": "pc_gt1",
+    "phase_count_raw": 2,
+    "debug_bucket": "swing_complex",
+    "finish_reason": "STOP"
+  }
+]

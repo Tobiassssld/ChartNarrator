@@ -1,0 +1,68 @@
+# ChartNarrator path configuration snapshot.
+# These files document the public repository defaults. The current scripts do
+# not require YAML loading; command-line arguments remain the source of runtime
+# overrides.
+
+project:
+  root: "."
+
+data:
+  raw_cbs_data: "data/raw_cbs_data"
+  cleaned_csv_data: "data/cleaned_csv_data"
+  images: "data/images"
+  reports: "data/reports"
+
+data_preparation:
+  chart_generation_report: "data/reports/chart_generation_stats.json"
+
+stage1:
+  anchors: "data/stage1/chart_anchors_stage1.json"
+  unevaluated_labels_dir: "data/stage1/unevaluated_labels"
+  evaluated_labels_dir: "data/stage1/evaluated_labels"
+  analysis_dir: "data/stage1/analysis"
+  sample_analysis_dir: "data/stage1/analysis/samples"
+
+stage2:
+  candidate_pool_dir: "data/stage2/candidate_pool"
+  semantic_pool: "data/stage2/candidate_pool/semantic_pool.json"
+  semantic_pool_filtered: "data/stage2/candidate_pool/semantic_pool_filtered.json"
+  stage1_compliant: "data/stage2/candidate_pool/stage1_compliant.json"
+  stage2_candidates: "data/stage2/candidate_pool/stage2_candidates.json"
+  filter_report: "data/stage2/candidate_pool/filter_report.json"
+
+  anchors_dir: "data/stage2/anchors"
+  anchors: "data/stage2/anchors/chart_anchors_stage2_v2_morph_binary.json"
+  anchors_filtered: "data/stage2/anchors/chart_anchors_stage2_v2_morph_binary_filtered.json"
+
+  unevaluated_labels: "data/stage2/unevaluated_labels/narrative_stage2_0315.json"
+  evaluated_labels: "data/stage2/evaluated_labels/evaluated_narrative_stage2_0316.json"
+  analysis_dir: "data/stage2/analysis"
+
+fine_tuning:
+  vlm_4_5: "data/finetune_dataset_4_5"
+  vlm_5_0: "data/finetune_dataset_5_0"
+  vlm_4_5_matched: "data/finetune_dataset_4_5_matched"
+  noanchor_4_5: "data/finetune_noanchor_4_5"
+  textonly_4_5: "data/finetune_textonly_4_5"
+  text_representations: "data/text_only/text_representations_4_5.json"
+
+evaluation:
+  predictions_dir: "data/evaluation/predictions"
+  evaluated_predictions_dir: "data/evaluation/evaluated_predictions"
+
+  predictions:
+    vlm_4_5: "data/evaluation/predictions/predictions_test_stage2_4_5.json"
+    vlm_5_0: "data/evaluation/predictions/predictions_test_stage2_5_0_round3.json"
+    vlm_4_5_matched: "data/evaluation/predictions/predictions_test_stage2_4_5_matched_round3.json"
+    noanchor_4_5: "data/evaluation/predictions/predictions_test_noanchor_4_5.json"
+    textonly_4_5: "data/evaluation/predictions/predictions_test_textonly_stage2_4_5_round3.json"
+    zeroshot: "data/evaluation/predictions/predictions_test_zeroshot.json"
+
+  evaluated_predictions:
+    vlm_4_5: "data/evaluation/evaluated_predictions/evaluated_predictions_test_stage2_4_5_primary.json"
+    noanchor_4_5: "data/evaluation/evaluated_predictions/evaluated_predictions_test_noanchor_4_5.json"
+    textonly_4_5: "data/evaluation/evaluated_predictions/evaluated_predictions_test_textonly_stage2_4_5_round3.json"
+    zeroshot: "data/evaluation/evaluated_predictions/evaluated_predictions_test_zeroshot_4_5.json"
+
+validation:
+  kappa_review_dir: "data/validation/stage2_kappa_review"

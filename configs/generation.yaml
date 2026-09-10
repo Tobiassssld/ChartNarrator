@@ -1,0 +1,105 @@
+# ChartNarrator generation configuration snapshot.
+# These values mirror the public scripts and notebooks. They are documentation
+# defaults rather than a mandatory runtime configuration layer.
+
+api:
+  provider: "Google Gemini"
+  api_key_env: "GOOGLE_API_KEY"
+  store_api_keys_in_repo: false
+
+models:
+  stage1_generation: "models/gemini-2.0-flash"
+  stage1_judge: "gemini-2.5-flash"
+  stage2_generation: "gemini-2.5-flash"
+  stage2_judge: "gemini-2.5-pro"
+  prediction_judge: "gemini-2.5-pro"
+
+stage1_generation:
+  script: "scripts/stage1/generate_narratives.py"
+  image_dir: "data/images"
+  anchors_file: "data/stage1/chart_anchors_stage1.json"
+  output_dir: "data/stage1/unevaluated_labels"
+  output_pattern: "narratives_cbs_<topic>.json"
+  default_sleep_seconds: 15
+  debug_limit: 3
+  debug_mix_topics: 10
+  debug_mix_per_topic: 1
+  debug_mix_output: "cbs_debug_mix.json"
+  conversation_roles:
+    user: "human"
+    assistant: "models/gemini-2.0-flash"
+
+stage1_control_generation:
+  script: "experiments/stage1_control/generate_with_external_context.py"
+  image_dir: "data/images"
+  anchors_file: "data/stage1/chart_anchors_stage1.json"
+  output_dir: "data/experiments/stage1_control/unevaluated_labels"
+  model: "models/gemini-2.0-flash"
+
+stage2_generation:
+  script: "scripts/stage2/generate_narratives.py"
+  input_json: "data/stage2/candidate_pool/semantic_pool_filtered.json"
+  anchor_file: "data/stage2/anchors/chart_anchors_stage2_v2_morph_binary_filtered.json"
+  image_root: "data/images"
+  output_json: "data/stage2/unevaluated_labels/narrative_stage2_0315.json"
+  model: "gemini-2.5-flash"
+  prompt_version: "stage2_260315_morphroute_v4"
+  random_seed: 42
+  debug_limit: 30
+  debug_per_pattern: 5
+  conversation_roles:
+    user: "user"
+    assistant: "assistant"
+
+stage2_routing:
+  route_labels:
+    - "simple"
+    - "complex"
+  debug_buckets:
+    - "simple"
+    - "trend_complex"
+    - "swing_complex"
+    - "osc_complex"
+  morphology_families:
+    - "trend_drift"
+    - "structural_swing"
+    - "oscillatory_or_seasonal_regime"
+  binary_phase_labels:
+    - "pc1"
+    - "pc_gt1"
+
+fine_tuning_notebooks:
+  vlm_4_5: "notebooks/finetuning/vlm_4_5.ipynb"
+  vlm_5_0: "notebooks/finetuning/vlm_5_0.ipynb"
+  vlm_4_5_matched: "notebooks/finetuning/vlm_4_5_matched.ipynb"
+  vlm_noanchor_4_5: "notebooks/finetuning/vlm_noanchor_4_5.ipynb"
+  textonly_4_5: "notebooks/finetuning/textonly_4_5.ipynb"
+  zeroshot_inference: "notebooks/inference/zeroshot_inference.ipynb"
+
+fine_tuning_models:
+  vlm_base_model: "Qwen/Qwen2-VL-7B-Instruct"
+  textonly_base_model: "Qwen/Qwen2.5-7B-Instruct"
+  adapter_method: "QLoRA"
+  quantization: "4-bit NF4"
+  lora:
+    rank: 64
+    alpha: 32
+    dropout: 0.05
+  common_training:
+    epochs: 8
+    learning_rate: 0.00001
+    cutoff_len: 4096
+  vlm_training:
+    template: "qwen2_vl"
+    batch_size: 2
+    gradient_accumulation_steps: 8
+    eval_steps: 100
+    save_steps: 200
+  textonly_training:
+    template: "qwen"
+    batch_size: 1
+    gradient_accumulation_steps: 16
+  inference:
+    do_sample: false
+    repetition_penalty: 1.1
+    max_new_tokens: 2048

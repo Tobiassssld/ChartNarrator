@@ -1,0 +1,35 @@
+{
+  "pool_original": 1582,
+  "pool_filtered": 1443,
+  "pool_removed_total": 139,
+  "removed_breakdown": {
+    "high_risk_topic": 139,
+    "anchor_not_in_v2": 0
+  },
+  "removed_by_topic": {
+    "energy": 14,
+    "inflation": 34,
+    "population": 91
+  },
+  "anchor_v2_original": 1960,
+  "anchor_v2_filtered": 1443,
+  "anchor_removed_breakdown": {
+    "high_risk": 175,
+    "orphan_not_in_pool": 342
+  },
+  "removed_entries_high_risk": [
+    {
+      "id": "cbs_Energy_Prices_Consumers_Electricity_Variable_007_202308_202507.png",
+      "image": "cbs_Energy_Prices_Consumers_Electricity_Variable_007_202308_202507.png",
+      "topic_category": "energy",
+      "unit": "variable electricity price for consumers (index or price level)"
+    },
+    {
+      "id": "cbs_Energy_Prices_Consumers_Electricity_Variable_008_202101_202512.png",
+      "image": "cbs_Energy_Prices_Consumers_Electricity_Variable_008_202101_202512.png",
+      "topic_category": "energy",
+      "unit": "variable electricity price for consumers (index or price level)"
+    }
+  ],
+  "removed_entries_no_anchor": []
+}

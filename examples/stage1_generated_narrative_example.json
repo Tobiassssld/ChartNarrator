@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "image": "data/images/cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Analyze this chart about Bankruptcies."
+      },
+      {
+        "from": "models/gemini-2.0-flash",
+        "value": "---\n[SECTION 1: EVIDENCE TABLE]\n\n| Visual pattern | Numeric anchor(s) | Mechanism | Event mapping | Support tag |\n|---|---|---|---|---|\n| Initial rise | From 1993-06 to 1994-02, the count increased from 3042.0 to 3435.0. | Increased economic activity or looser lending standards might initially lead to more company formations and expansions, eventually resulting in more bankruptcies after some delay. | N/A | SUPPORTED |\n| Peak | The count reaches a peak of 3435.0 on 1994-02-01. | A peak in bankruptcies may reflect a period when the lagged effects of earlier economic expansions are fully realized, or when credit conditions tighten. | N/A | SUPPORTED |\n| Decline to trough | From the peak of 343\n...[truncated for example]"
+      }
+    ]
+  }
+]

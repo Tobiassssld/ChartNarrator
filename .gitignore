@@ -1,0 +1,124 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.jsonl.secrets
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+.cache/
+.cache-*/
+tmp/
+temp/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# Runtime outputs
+outputs/
+runs/
+wandb/
+lightning_logs/
+mlruns/
+
+# Model checkpoints and large ML artifacts
+checkpoints/
+**/checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+adapter_model.safetensors
+training_args.bin
+trainer_state.json
+trainer_log.jsonl
+all_results.json
+train_results.json
+eval_results.json
+training_loss.png
+training_eval_loss.png
+
+# Raw and generated research data
+data/raw_cbs_data/
+data/cleaned_csv_data/
+data/images/
+data/reports/
+
+# Stage outputs
+data/stage1/
+data/stage2/
+
+# Fine-tuning datasets
+data/finetune_dataset_*/
+data/finetune_noanchor_*/
+data/finetune_textonly_*/
+
+# Evaluation and validation outputs
+data/evaluation/
+data/validation/
+data/text_only/
+
+# Keep lightweight directory placeholders and documentation if present
+!data/.gitkeep
+!data/README.md
+!data/**/.gitkeep
+!data/**/README.md
+
+# Local archive / private notes
+archive/
+private/
+_private/
+local/
+scratch/
+notes_private/
+/.gitignore

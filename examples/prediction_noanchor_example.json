@@ -1,0 +1,24 @@
+[
+  {
+    "id": "cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "image": "data/images/cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "morphology_family": "structural_swing",
+    "route_label": "complex",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata."
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe financial series began at 9,804.75 on January 3, 2021, initiating an upward trajectory that continued through subsequent months. This initial ascent was followed by a period of contained fluctuation around approximately 10,600 from March to May 2021, before the rate resumed its rise. The overall movement culminated in a peak of 11,909.5 on December 31, 2021, marking the highest point within the observation window.\n\n── Paragraph 2\nThe initial phase of continuous increase established a rising structural trend, which then transitioned into a period of bounded oscillation. This oscillatory phase created a temporary plateau around 10,600, which functioned as a reference ceiling\n...[truncated for example]"
+      }
+    ],
+    "reference": "── Paragraph 1\nThe production volume index for total construction began at 76.175 in December 2017 and increased steadily, reaching approximately 92 by early 2020. This initial rise was followed by a period of stabilization, with the index fluctuating around the 92-93 level through much of 2020. A renewed and steeper increase then commenced in late 2020, accelerating the index past 100 in 2021 and continuing its ascent through 2022, reaching above 116 by early 2023. From early 2023, the pace of increase moderated, with the index rising more gradually towards its peak of 119.9 at the end of the observation period in November 2024.\n\n── Paragraph 2\nThe initial period of increasing volume from 7\n...[truncated for example]",
+    "format_check": {
+      "p1": true,
+      "p2": true,
+      "p3": true
+    }
+  }
+]

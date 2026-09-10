@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cbs_Inflation_CPI_Recreation_014_199802_200204.png",
+    "morphology_family": "structural_swing",
+    "route_label": "complex",
+    "prompt_version": "stage2_260315_morphroute_v4",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata.\n\n[CHART CONTEXT]\nVariable: consumer price index, recreation and culture (base year = 100).\nHigher values indicate neutral conditions.\nClosed-system note: Do not reference specific cultural or leisure events.\nTime window: February 1998 – April 2002 (51 months)\nStart value: 92.1342 | End value: 95.7808\nPeak: 95.7808 in April 2002 | Trough: 91.8017 in December 2000\nTrend: non monotonic, 3 phases\n  Phase 1: increasing from February 1998 to January 2000 (92.1342 → 93.5958, +1.5)\n  Phase 2: decreasing from January 2000 to January 2001 (93.5958 → 91.9742, -1.6)\n  Phase 3: increasing from Jan\n...[truncated for example]"
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe consumer price index for recreation and culture began at 92.1342 on 1998-02-01, then increased to a local peak of 93.5958 on 2000-01-01. Following this, the index declined, reaching a local trough of 91.9742 on 2001-01-01. From this trough, the series reversed direction and rose continuously, concluding the period at its peak value of 95.7808 on 2002-04-01.\n\n── Paragraph 2\nThe initial upward trajectory culminates in a turning point at 93.5958 on 2000-01-01, which defines the upper bound of the first rising phase and immediately precedes a directional reversal. This reversal shifts the movement into a declining phase, establishing a new structural reference at the local tro\n...[truncated for example]"
+      }
+    ]
+  }
+]

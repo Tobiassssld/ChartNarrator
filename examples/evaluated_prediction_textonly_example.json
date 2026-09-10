@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "morphology_family": "structural_swing",
+    "route_label": "complex",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata.\n\n[CHART CONTEXT]\nVariable: production volume index for total construction (base year = 100).\nHigher values indicate better conditions.\nClosed-system note: Interpret as structural production dynamics only.\nTime window: December 2017 – November 2024 (84 months)\nStart value: 76.175 | End value: 119.9\nPeak: 119.9 in November 2024 | Trough: 76.175 in December 2017\nTrend: monotonic increasing, 1 phase\n  Phase 1: increasing from December 2017 to November 2024 (76.175 → 119.9, +43.7)\nGeneration guidance: COMPLEX PATTERN: This window contains internal structure such as a reversal, plateau, sho\n...[truncated for example]"
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe production volume index began at its trough of 76.175 on 2017-12-01 and increased steadily over the initial period, reaching approximately 90 around mid-2020. Following this rise, the series entered a period of fluctuation with some retracement, before resuming an upward trajectory that accelerated significantly towards the end of the observation window. The overall trend is one of continuous increase, culminating in the peak value of 119.9 observed on 2024-11-01.\n\n── Paragraph 2\nThe initial sustained rise established a higher reference level for subsequent movement, which then shifted into a phase characterised by bounded oscillation and partial retracement. This containe\n...[truncated for example]"
+      }
+    ],
+    "reference": "── Paragraph 1\nThe production volume index for total construction began at 76.175 in December 2017 and increased steadily, reaching approximately 92 by early 2020. This initial rise was followed by a period of stabilization, with the index fluctuating around the 92-93 level through much of 2020. A renewed and steeper increase then commenced in late 2020, accelerating the index past 100 in 2021 and continuing its ascent through 2022, reaching above 116 by early 2023. From early 2023, the pace of increase moderated, with the index rising more gradually towards its peak of 119.9 at the end of the observation period in November 2024.\n\n── Paragraph 2\nThe initial period of increasing volume from 7\n...[truncated for example]",
+    "format_check": {
+      "p1": true,
+      "p2": true,
+      "p3": true
+    },
+    "prediction_evaluation": {
+      "mechanistic_grounding": {
+        "score": 5,
+        "justification": "The mechanism in P2 is precise and well-grounded in the chart's structure. It correctly identifies the key feature of this 'structural swing' morphology: an initial rise, followed by a phase of 'bounded oscillation and partial retracement' (the plateau around 2020-2021), and finally a 'renewed upward acceleration'. This passes the specificity test by identifying rate changes and distinct structural stages."
+      },
+      "dependency_strength": {
+        "score": 4,
+        "justification": "P3 establishes a valid dependency by explaining that the final acceleration and peak occur *after* the temporary stabilization period described in P2. However, the score is capped at 4 because the anchor point (the stabilization) is not explicitly named with a date or value, preventing a stronger relational link. The relationship is a generic continuation of the trend after an interruption.",
+        "anchor_borrowing": false,
+        "named_anchor_in_p3": false,
+        "dependency_relation_type": "generic_continuation",
+        "p3_role_distinct_from_p2": true
+      },
+      "closed_system_compliance": {
+        "score": 5,
+        "justification": "The narrative is fully source-bounded, making no external claims. All descriptions are derived directly from the chart's shape and the variable's definition as a production index."
+      },
+      "structural_coherence": {
+        "score": 5,
+        "justification": "The narrative perfectly follows the P1-P2-P3 structure expected for a 'complex' route. P1 provides a chronological overview, P2 details the mechanism of the structural swing, and P3 explains the dependency of the final phase on the middle phase. The paragraph roles are distinct and the flow is logical."
+      },
+      "overall_assessment": "This is a high-quality narrative that correctly identifies the chart's 'structural_swing' morphology, which justifies its 'complex' route classification. The mechanistic explanation of the different phases (rise, plateau, acceleration) is excellent. The dependency paragraph successfully links the final movement to the preceding stabilization, though it could be strengthened with a more explicit anchor reference.",
+      "weighted_average_score": 4.65,
+      "training_eligible": true,
+      "route_label": "complex",
+      "morphology_family": "structural_swing"
+    }
+  }
+]

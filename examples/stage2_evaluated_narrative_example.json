@@ -1,0 +1,57 @@
+[
+  {
+    "id": "cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "image": "data/images/cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "stage2_narrative": "── Paragraph 1\nThe series for company bankruptcies began at 3042.0 in June 1993, then increased over the subsequent months to reach its highest point, a peak of 3435.0, in February 1994. Following this peak, the number of bankruptcies entered a prolonged decline, reaching a trough of 2606.0 in November 1996. The series then showed a subsequent, partial recovery, ending the observation period at 2699.0 in November 1997.\n\n── Paragraph 2\nThe initial upward movement culminates in a clear structural reversal at the peak of 3435.0 on February 1994, which interrupts the prior increase. This turning point initiates a sustained declining trajectory that carries the series to a trough of 2606.0 by Nov\n...[truncated for example]",
+    "stage2_conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata."
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe series for company bankruptcies began at 3042.0 in June 1993, then increased over the subsequent months to reach its highest point, a peak of 3435.0, in February 1994. Following this peak, the number of bankruptcies entered a prolonged decline, reaching a trough of 2606.0 in November 1996. The series then showed a subsequent, partial recovery, ending the observation period at 2699.0 in November 1997.\n\n── Paragraph 2\nThe initial upward movement culminates in a clear structural reversal at the peak of 3435.0 on February 1994, which interrupts the prior increase. This turning point initiates a sustained declining trajectory that carries the series to a trough of 2606.0 by Nov\n...[truncated for example]"
+      }
+    ],
+    "prompt_version": "stage2_260315_morphroute_v4",
+    "pattern_type": "complex",
+    "route_label": "complex",
+    "morphology_family": "structural_swing",
+    "binary_pc": "pc_gt1",
+    "phase_count_raw": 2,
+    "debug_bucket": "swing_complex",
+    "finish_reason": "STOP",
+    "stage2_evaluation": {
+      "dependency_labels": {
+        "anchor_borrowing": false,
+        "named_anchor_in_p3": true,
+        "p3_role_distinct_from_p2": true,
+        "dependency_relation_type": "reference_ceiling",
+        "morphology_mismatch": false,
+        "oscillation_evidence_type": null
+      },
+      "mechanistic_grounding": {
+        "score": 5,
+        "justification": "P2 correctly identifies the key chart-grounded mechanisms: the structural reversal at the 1994 peak, and the establishment of a lower bound by the 1996 trough. The description is specific and avoids any latent or domain-inferring language."
+      },
+      "dependency_strength": {
+        "score": 5,
+        "dependency_evidence": "The peak at 3435.0 on February 1994 functions as a reference ceiling... the later partial recovery to 2699.0 remains contained below the initial peak and is supported by the trough at 2606.0.",
+        "justification": "P3 establishes a clear dependency by assigning the 1994 peak the role of a 'reference ceiling' that contains the final recovery phase. It successfully explains how the earlier structure (peak and trough) constrains later movement, explicitly naming the relevant values, thus qualifying for the highest score."
+      },
+      "closed_system_compliance": {
+        "score": 5,
+        "justification": "The narrative adheres strictly to source-bounded structural language (peak, trough, reversal, ceiling, range) and does not introduce any external actors, events, or unplotted variables."
+      },
+      "structural_coherence": {
+        "score": 5,
+        "justification": "The narrative follows the expected complex structure perfectly. P1 observes the three distinct phases, P2 explains the mechanisms of reversal and trough formation, and P3 resolves the dependency of the final recovery on the earlier peak and trough. The roles are distinct and logically sequenced."
+      },
+      "overall_assessment": "This complex route, structural_swing narrative correctly uses the three-paragraph structure. Its main strength is the precise and coherent explanation of the chart's dynamics, effectively using structural concepts like 'reversal' and 'reference ceiling' to build a compelling explanatory arc. This is an excellent example of a high-quality Stage-2 narrative with no weaknesses.",
+      "weighted_average_score": 5.0,
+      "training_eligible": true,
+      "route_label": "complex",
+      "morphology_family": "structural_swing"
+    }
+  }
+]

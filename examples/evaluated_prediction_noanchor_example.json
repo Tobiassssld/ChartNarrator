@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "image": "data/images/cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "morphology_family": "structural_swing",
+    "route_label": "complex",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata."
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe financial series began at 9,804.75 on January 3, 2021, initiating an upward trajectory that continued through subsequent months. This initial ascent was followed by a period of contained fluctuation around approximately 10,600 from March to May 2021, before the rate resumed its rise. The overall movement culminated in a peak of 11,909.5 on December 31, 2021, marking the highest point within the observation window.\n\n── Paragraph 2\nThe initial phase of continuous increase established a rising structural trend, which then transitioned into a period of bounded oscillation. This oscillatory phase created a temporary plateau around 10,600, which functioned as a reference ceiling\n...[truncated for example]"
+      }
+    ],
+    "reference": "── Paragraph 1\nThe production volume index for total construction began at 76.175 in December 2017 and increased steadily, reaching approximately 92 by early 2020. This initial rise was followed by a period of stabilization, with the index fluctuating around the 92-93 level through much of 2020. A renewed and steeper increase then commenced in late 2020, accelerating the index past 100 in 2021 and continuing its ascent through 2022, reaching above 116 by early 2023. From early 2023, the pace of increase moderated, with the index rising more gradually towards its peak of 119.9 at the end of the observation period in November 2024.\n\n── Paragraph 2\nThe initial period of increasing volume from 7\n...[truncated for example]",
+    "format_check": {
+      "p1": true,
+      "p2": true,
+      "p3": true
+    },
+    "prediction_evaluation": {
+      "mechanistic_grounding": {
+        "score": 1,
+        "justification": "The narrative is entirely hallucinated. It describes values (e.g., a peak of 11,909.5) and a time frame (Jan-Dec 2021) that have no basis in the provided chart, which shows an index from approximately 76 to 120 between 2017 and 2024. The described mechanism, involving a plateau around 10,600, is therefore based on fabricated data."
+      },
+      "dependency_strength": {
+        "score": 1,
+        "justification": "The dependency described in P3 is invalid because it links two hallucinated chart features. The 'later upward extension' and the 'preceding plateau' are both fabrications not present in the source chart, making the claimed structural dependency between them entirely unfounded.",
+        "anchor_borrowing": false,
+        "named_anchor_in_p3": false,
+        "dependency_relation_type": "generic_continuation",
+        "p3_role_distinct_from_p2": true
+      },
+      "closed_system_compliance": {
+        "score": 1,
+        "justification": "The narrative completely fails to adhere to the closed system of the chart. All numerical values, dates, and described events are fabricated and not derivable from the source material, representing a total departure from source-boundedness."
+      },
+      "structural_coherence": {
+        "score": 5,
+        "justification": "Despite the content being entirely hallucinated, the narrative correctly follows the P1-P2-P3 structure expected for a complex route. The paragraphs are role-distinct, with P1 giving an overview, P2 detailing a mechanism, and P3 describing a dependency, resulting in a formally coherent structure."
+      },
+      "overall_assessment": "This narrative is a catastrophic failure due to complete data hallucination. It fabricates an entirely different dataset, including values, dates, and structural features. As a result, both the mechanistic grounding and dependency strength are baseless. While the formal three-paragraph structure is correctly followed, the content is completely unmoored from the provided source chart.",
+      "weighted_average_score": 1.4,
+      "training_eligible": false,
+      "route_label": "complex",
+      "morphology_family": "structural_swing"
+    }
+  }
+]

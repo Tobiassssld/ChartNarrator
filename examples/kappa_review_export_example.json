@@ -1,0 +1,29 @@
+[
+  {
+    "index": 1,
+    "image_file": "cbs_Construction_Production_Index_Total_Construction_015_201308_202103.png",
+    "topic": "Construction Production Index Total Construction",
+    "stratum": "A_ceiling",
+    "route": "swing_complex",
+    "wa_tier": "HIGH",
+    "wa": 5,
+    "morphology": "structural_swing",
+    "anchor_borrowing": false,
+    "morph_mismatch": false,
+    "annotator": "unknown",
+    "llm_weighted_avg": 5,
+    "llm_mechanistic_grounding_score": 5,
+    "human_mechanistic_grounding_score": 4,
+    "human_mechanistic_grounding_notes": "",
+    "llm_dependency_strength_score": 5,
+    "human_dependency_strength_score": 4,
+    "human_dependency_strength_notes": "",
+    "llm_closed_system_compliance_score": 5,
+    "human_closed_system_compliance_score": 5,
+    "human_closed_system_compliance_notes": "",
+    "human_csc_confirm": true,
+    "llm_structural_coherence_score": 5,
+    "human_structural_coherence_score": 4,
+    "human_structural_coherence_notes": ""
+  }
+]

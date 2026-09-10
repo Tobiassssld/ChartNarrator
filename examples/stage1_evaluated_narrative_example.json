@@ -1,0 +1,37 @@
+[
+  {
+    "id": "cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "image": "data/images/cbs_Bankruptcies_Key_Figures_Companies_000_199306_199711.png",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Analyze this chart about Bankruptcies."
+      },
+      {
+        "from": "models/gemini-2.0-flash",
+        "value": "---\n[SECTION 1: EVIDENCE TABLE]\n\n| Visual pattern | Numeric anchor(s) | Mechanism | Event mapping | Support tag |\n|---|---|---|---|---|\n| Initial rise | From 1993-06 to 1994-02, the count increased from 3042.0 to 3435.0. | Increased economic activity or looser lending standards might initially lead to more company formations and expansions, eventually resulting in more bankruptcies after some delay. | N/A | SUPPORTED |\n| Peak | The count reaches a peak of 3435.0 on 1994-02-01. | A peak in bankruptcies may reflect a period when the lagged effects of earlier economic expansions are fully realized, or when credit conditions tighten. | N/A | SUPPORTED |\n| Decline to trough | From the peak of 343\n...[truncated for example]"
+      }
+    ],
+    "evaluation": {
+      "semantic_correctness": {
+        "score": 5,
+        "justification": "All numeric values (start, peak, trough, end, overall change) and temporal references in the narrative precisely match the provided anchor metadata. All stated trend directions are factually correct.",
+        "error_type": "none",
+        "error_count": 0
+      },
+      "syntactic_coverage": {
+        "score": 5,
+        "justification": "The narrative effectively covers all salient patterns including the start, peak, trough, and end values, and the main trend phases. It presents information chronologically and avoids excessive detail on minor fluctuations.",
+        "issue_type": "none",
+        "issue_severity": "none"
+      },
+      "pragmatic_appropriateness": {
+        "score": 5,
+        "justification": "The narrative adheres to all pragmatic constraints, using the correct data window and value type. Interpretive statements are appropriately hedged and directly supported by the allowed \"Mechanism\" insights in the evidence table.",
+        "error_type": "none",
+        "error_count": 0
+      },
+      "weighted_average_score": 5.0
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "image": "data/images/cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "morphology_family": "structural_swing",
+    "route_label": "complex",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata.\n\n[CHART CONTEXT]\nVariable: production volume index for total construction (base year = 100).\nHigher values indicate better conditions.\nClosed-system note: Interpret as structural production dynamics only.\nTime window: December 2017 – November 2024 (84 months)\nStart value: 76.175 | End value: 119.9\nPeak: 119.9 in November 2024 | Trough: 76.175 in December 2017\nTrend: monotonic increasing, 1 phase\n  Phase 1: increasing from December 2017 to November 2024 (76.175 → 119.9, +43.7)\nGeneration guidance: COMPLEX PATTERN: This window contains internal structure such as a reversal, plateau, sho\n...[truncated for example]"
+      },
+      {
+        "from": "assistant",
+        "value": "── Paragraph 1\nThe production volume index began at its trough of 76.175 on 2017-12-01 and increased consistently over the entire observation period. The series reached a peak of 119.9 on 2024-11-01, which also marks the end of the window. Throughout this period, the index exhibited an overall upward trend without any visible reversals or distinct plateaus, indicating continuous growth.\n\n── Paragraph 2\nThe initial increase established a clear upward trajectory for the production volume index, moving from its starting point of 76.175. This upward movement continued uninterrupted until the end of the observation window, with the series consistently rising above all earlier levels. The sustaine\n...[truncated for example]"
+      }
+    ],
+    "reference": "── Paragraph 1\nThe production volume index for total construction began at 76.175 in December 2017 and increased steadily, reaching approximately 92 by early 2020. This initial rise was followed by a period of stabilization, with the index fluctuating around the 92-93 level through much of 2020. A renewed and steeper increase then commenced in late 2020, accelerating the index past 100 in 2021 and continuing its ascent through 2022, reaching above 116 by early 2023. From early 2023, the pace of increase moderated, with the index rising more gradually towards its peak of 119.9 at the end of the observation period in November 2024.\n\n── Paragraph 2\nThe initial period of increasing volume from 7\n...[truncated for example]",
+    "format_check": {
+      "p1": true,
+      "p2": true,
+      "p3": true
+    }
+  }
+]

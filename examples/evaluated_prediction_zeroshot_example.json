@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "image": "data/images/cbs_Construction_Production_Index_Total_Construction_016_201712_202411.png",
+    "morphology_family": "structural_swing",
+    "route_label": "complex",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "Generate a Stage-2 context-aware financial narrative for the given chart using the provided anchor metadata.\n\n[CHART CONTEXT]\nVariable: production volume index for total construction (base year = 100).\nHigher values indicate better conditions.\nClosed-system note: Interpret as structural production dynamics only.\nTime window: December 2017 – November 2024 (84 months)\nStart value: 76.175 | End value: 119.9\nPeak: 119.9 in November 2024 | Trough: 76.175 in December 2017\nTrend: monotonic increasing, 1 phase\n  Phase 1: increasing from December 2017 to November 2024 (76.175 → 119.9, +43.7)\nGeneration guidance: COMPLEX PATTERN: This window contains internal structure such as a reversal, plateau, sho\n...[truncated for example]"
+      },
+      {
+        "from": "assistant",
+        "value": "In this financial narrative, we observe the production volume index for total construction over an eight-year period, from December 2017 to November 2024. The index starts at 76.175 and ends at 119.9, indicating a significant increase of 43.7 points during this time frame. The overall trend is monotonic increasing, with no signs of reversing or plateaus.\n\nThe first phase of this trend begins in December 2017, where the index stands at its lowest point of 76.175. As time progresses, there is a gradual but steady rise in the index, reaching its peak of 119.9 in November 2024. Throughout this period, the index shows a consistent upward trajectory without any interruptions or setbacks.\n\nThis com\n...[truncated for example]"
+      }
+    ],
+    "reference": "── Paragraph 1\nThe production volume index for total construction began at 76.175 in December 2017 and increased steadily, reaching approximately 92 by early 2020. This initial rise was followed by a period of stabilization, with the index fluctuating around the 92-93 level through much of 2020. A renewed and steeper increase then commenced in late 2020, accelerating the index past 100 in 2021 and continuing its ascent through 2022, reaching above 116 by early 2023. From early 2023, the pace of increase moderated, with the index rising more gradually towards its peak of 119.9 at the end of the observation period in November 2024.\n\n── Paragraph 2\nThe initial period of increasing volume from 7\n...[truncated for example]",
+    "format_check": {
+      "p1": false,
+      "p2": false,
+      "p3": false
+    },
+    "prediction_evaluation": {
+      "mechanistic_grounding": {
+        "score": 2,
+        "justification": "The narrative fails to describe the primary mechanism visible in the chart, which is a change in the rate of increase. P2 incorrectly describes a 'consistent upward trajectory' and a 'steady rise', completely missing the clear acceleration that occurs from 2021 onwards. Instead of detailing this structural shift, P2 largely copies the start and end point data from P1, failing the specificity test."
+      },
+      "dependency_strength": {
+        "score": 1,
+        "justification": "The narrative completely fails to establish a dependency relationship. P3 does not describe a later phase of movement or how it is constrained by an earlier one. Instead, it introduces speculative, external causes for the trend ('growing demand', 'economic growth'), which is not the role of a dependency paragraph. No structural link is described or resolved.",
+        "anchor_borrowing": false,
+        "named_anchor_in_p3": false,
+        "dependency_relation_type": null,
+        "p3_role_distinct_from_p2": true
+      },
+      "closed_system_compliance": {
+        "score": 1,
+        "justification": "The narrative contains severe violations of closed-system compliance. P3 introduces external causal factors such as 'economic growth' and 'investment in infrastructure'. P4 goes further, giving investment advice and mentioning external actors like 'Investors and stakeholders', which is explicitly forbidden."
+      },
+      "structural_coherence": {
+        "score": 2,
+        "justification": "The narrative does not follow the expected P1+P2+P3 structure for a complex route. It includes a fourth paragraph of external commentary. Furthermore, the paragraphs fail in their roles: P2 largely duplicates the overview of P1 rather than explaining a mechanism, and P3 fails entirely to perform its dependency function."
+      },
+      "overall_assessment": "This is a very low-quality narrative that fails on all dimensions. For a 'complex' route with a 'structural_swing' morphology, it was expected to identify and explain the change in slope. It completely misses this key feature, incorrectly describing the trend as consistent. The narrative violates its structural requirements by misusing P2 and P3 and adding a fourth paragraph, and it severely breaches source-boundedness by introducing external causal theories and investment advice.",
+      "weighted_average_score": 1.45,
+      "training_eligible": false,
+      "route_label": "complex",
+      "morphology_family": "structural_swing"
+    }
+  }
+]
