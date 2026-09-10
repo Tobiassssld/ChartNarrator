@@ -1,12 +1,6 @@
 """
 Prepare the Stage 2 VLM no-anchor ablation dataset.
 
-This public-repository version preserves the original no-anchor ablation logic:
-it loads training_set_4_5.json, performs a morphology-stratified 80/10/10 split
-with random seed 42, keeps the original user prompt without injecting
-[CHART CONTEXT], copies images, and writes train.json, val.json, test.json,
-and split_summary.txt.
-
 Inputs:
     data/stage2/analysis/training_set_4_5.json
     data/images/

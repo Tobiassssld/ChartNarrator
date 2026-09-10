@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 """Filter the Stage 2 candidate pool and synchronize Stage 2 anchors.
 
-This public-repository version preserves the original filtering logic:
-
-1. Remove high-risk-topic entries from semantic_pool.json.
-2. Remove pool entries whose image key has no corresponding Stage 2 anchor.
-3. Write semantic_pool_filtered.json.
-4. Write a synchronized filtered Stage 2 anchor file.
-5. Write filter_report.json for auditability.
-
 Inputs:
     data/stage2/candidate_pool/semantic_pool.json
     data/stage2/anchors/chart_anchors_stage2_v2_morph_binary.json

@@ -1,12 +1,6 @@
 """
 Prepare the Stage 2 VLM fine-tuning dataset.
 
-This public-repository version preserves the original dataset construction
-logic: it loads training_set_4_5.json, performs a morphology-stratified
-80/10/10 split with random seed 42, renders [CHART CONTEXT] from the Stage 2
-anchors, injects that context into the user turn, copies images, and writes
-train.json, val.json, test.json, and split_summary.txt.
-
 Inputs:
     data/stage2/analysis/training_set_4_5.json
     data/stage2/anchors/chart_anchors_stage2_v2_morph_binary.json

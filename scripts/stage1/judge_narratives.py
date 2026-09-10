@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """Evaluate Stage 1 chart narratives with an LLM-as-a-Judge model.
 
-This script is the public-repository version of the original Stage 1 judge
-script. It preserves the original judge prompt, dimension weights, retry
-policy, output schema, and resume behavior, while replacing local paths,
-hard-coded credentials, and non-English debug text with repository-level
-configuration.
-
 Inputs:
     data/stage1/unevaluated_labels/narratives_cbs_*.json
     data/images/*.png

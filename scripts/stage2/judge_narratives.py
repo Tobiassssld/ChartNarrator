@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """Evaluate Stage 2 narratives with the route-aware Gemini LLM-as-a-Judge.
 
-This public-repository version preserves the original Stage 2 judge prompt,
-routing logic, deterministic post-check caps, weighted scoring, debug sampling,
-resume logic, and output schema. The changes are limited to repository paths,
-credential handling, English comments/messages, and Python 3.9-compatible code
-style.
-
 Inputs:
     data/stage2/unevaluated_labels/narrative_stage2_0315.json
     data/stage2/anchors/chart_anchors_stage2_v2_morph_binary_filtered.json
@@ -61,7 +55,7 @@ WA_THRESHOLD = {
     "complex": 4.5,
 }
 
-# 7) Repository paths for the public run.
+# 7) Repository paths.
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_INPUT_JSON = str(PROJECT_ROOT / "data" / "stage2" / "unevaluated_labels" / "narrative_stage2_0315.json")

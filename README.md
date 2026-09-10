@@ -100,7 +100,7 @@ For GPU fine-tuning or VLM inference notebooks, install the optional training de
 pip install -r requirements-train.txt
 ```
 
-The fine-tuning notebooks were cleaned for public release and include their original Colab-oriented installation cells. PyTorch wheels may need to be adapted to the target CUDA runtime.
+The fine-tuning notebooks include Colab-oriented installation cells. PyTorch wheels may need to be adapted to the target CUDA runtime.
 
 ## API keys
 

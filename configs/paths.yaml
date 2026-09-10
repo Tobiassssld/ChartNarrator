@@ -1,5 +1,5 @@
 # ChartNarrator path configuration snapshot.
-# These files document the public repository defaults. The current scripts do
+# These files document the repository defaults. The current scripts do
 # not require YAML loading; command-line arguments remain the source of runtime
 # overrides.
 

@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """Generate Stage 2 morphology-aware chart narratives.
 
-This public-repository version preserves the original Stage 2 generation
-prompt, route-aware completeness check, retry policy, debug sampling, and output
-schema. The changes are limited to repository paths, credential handling,
-English comments/messages, and Python 3.9-compatible code style.
-
 Inputs:
     data/stage2/candidate_pool/semantic_pool_filtered.json
     data/stage2/anchors/chart_anchors_stage2_v2_morph_binary_filtered.json

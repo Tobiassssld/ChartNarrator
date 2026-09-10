@@ -1,13 +1,6 @@
 """
 Judge fine-tuned VLM predictions on the Stage 2 test set.
 
-This public-repository version preserves the original Stage 2 prediction
-evaluation logic: the judge prompt, four-dimension scoring, deterministic caps,
-weighted-average calculation, training_eligible metadata, optional reference
-scoring, resume behavior, and debug mode are kept aligned with the original
-script. Changes are limited to repository paths, credential handling, and
-public-facing comments/messages.
-
 Inputs:
     data/evaluation/predictions/predictions_test_stage2_4_5.json
     data/stage2/anchors/chart_anchors_stage2_v2_morph_binary.json

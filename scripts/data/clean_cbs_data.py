@@ -14,9 +14,6 @@ Outputs:
     data/cleaned_csv_data/cbs_<topic>_<slice_id>.csv
     Each CSV contains: date, value, dataset, slice_id.
 
-The script preserves the original research selection rules and does not
-perform the smoothing, window sampling, or chart rendering used downstream.
-
 Run from the repository root:
     python scripts/data/clean_cbs_data.py
     python scripts/data/clean_cbs_data.py --input-dir /path/to/raw_data
@@ -61,7 +58,7 @@ def parse_cbs_date(period_str: Any) -> Optional[pd.Timestamp]:
     labels, and yearly labels. Returns None for missing or invalid values.
 
     The parser retains the original date-recognition rules so that the
-    historical dataset construction is not changed during cleanup.
+    dataset construction remains unchanged.
     """
     if pd.isna(period_str):
         return None

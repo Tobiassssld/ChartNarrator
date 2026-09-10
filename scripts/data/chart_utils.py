@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """Utilities for generating ChartNarrator charts from cleaned CBS time series.
 
-The functions implement the original research pipeline's financial processing,
-random window sampling, chart-type selection, and adaptive rendering.
-
 Inputs:
     Cleaned CSV files containing date, value, dataset, and slice_id.
 Outputs:
@@ -234,7 +231,7 @@ def select_plot_data(df: pd.DataFrame, time_horizon_months: int) -> str:
 
 
 def build_chart_stem(dataset_name: str, slice_id: str, chart_index: int) -> str:
-    """Return the public chart filename stem without a duplicated cbs_ prefix."""
+    """Return the chart filename stem without a duplicated cbs_ prefix."""
     dataset_stem = dataset_name.removeprefix("cbs_")
     return f"cbs_{dataset_stem}_{slice_id}_{chart_index:03d}"
 
@@ -309,7 +306,7 @@ def render_chart(
         grid_style = rng.choice(GRID_STYLES)
 
         # Scope the style to this figure instead of changing global pyplot state.
-        # Preserve the original cumulative pyplot style selection.
+        # Keep the configured cumulative pyplot style selection.
         plt.style.use(style)
         fig, ax = plt.subplots(figsize=(10, 6))
         dates = df["date"]

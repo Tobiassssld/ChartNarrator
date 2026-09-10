@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """Generate Stage 1 chart narratives from images and extracted anchors.
 
-This script is the public-repository version of the original Stage 1 generation
-script. It preserves the original generation prompt, retry policy, topic
-grouping, and output schema, while replacing local paths, hard-coded
-credentials, and non-English debug text with repository-level configuration.
-
 Inputs:
     data/images/*.png
     data/stage1/chart_anchors_stage1.json

@@ -3,11 +3,6 @@
 """
 Extract Stage 2 morphology-aware anchors from Stage 1 anchors and cleaned CSV data.
 
-This script builds the enhanced Stage 2 anchor dictionary used by the Stage 2
-narrative-generation pipeline. It preserves the original morphology-aware and
-binary phase-count logic while aligning paths and messages with the public
-repository structure.
-
 Inputs:
     data/stage1/chart_anchors_stage1.json
     data/stage2/candidate_pool/semantic_pool.json

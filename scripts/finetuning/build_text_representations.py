@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """Build text representations for the text-only ablation dataset.
 
-This public-repository version preserves the original text-representation
-logic: it scans image filenames, resolves the corresponding cleaned CSV and
-time window, applies the same rolling-sum / moving-average rule used by Stage 1
-anchors, formats dates as month-year strings, and writes
-text_representations.json.
-
 Inputs:
     data/finetune_dataset_5_0/images/
     data/cleaned_csv_data/

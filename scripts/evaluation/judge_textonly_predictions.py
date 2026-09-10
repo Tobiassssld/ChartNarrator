@@ -1,13 +1,6 @@
 """
 Judge text-only ablation predictions on the Stage 2 test set.
 
-This public-repository version preserves the original text-only prediction
-evaluation logic. It differs from the VLM prediction judge in one core way:
-the judge receives [TIME SERIES DATA] text instead of the chart image. The
-judge prompt, four-dimension scoring, deterministic caps, weighted-average
-calculation, training_eligible metadata, optional reference scoring, resume
-behavior, and debug mode are kept aligned with the original script.
-
 Inputs:
     data/evaluation/predictions/predictions_test_textonly_stage2_4_5_round3.json
     data/text_only/text_representations_4_5.json

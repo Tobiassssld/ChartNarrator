@@ -146,7 +146,7 @@ Top-level structure: list of entries.
 Notes:
 
 - `id` is the image filename and is used to retrieve anchors.
-- The cleaned public generator writes repository-relative image paths where possible.
+- The generator writes repository-relative image paths where possible.
 - Historical generated Stage 1 files may contain older relative image paths such as `../dataset/images\<filename>.png`; downstream scripts resolve image paths using the basename.
 - The original Stage 1 generation script uses `human` and `models/gemini-2.0-flash` roles.
 

@@ -7,10 +7,7 @@ parsing the public chart filename convention:
     cbs_<dataset>_<slice_id>_<index>_<start_yyyymm>_<end_yyyymm>.png
 
 It then reconstructs the exact plotted data window and extracts structured
-anchors used by the Stage 1 narrative generation script. The extraction logic
-preserves the original research implementation: rolling sums are used for flow
-series, moving averages are used for other series, and raw values are selected
-for short windows.
+anchors used by the Stage 1 narrative generation script.
 
 Inputs:
     data/images/*.png

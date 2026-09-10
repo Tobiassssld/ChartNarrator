@@ -3,17 +3,6 @@
 """
 Compute Cohen's Kappa for Stage 2 human validation.
 
-This script supports four input modes:
-  1. human_vs_llm: Judge JSON plus human annotation JSON.
-  2. human_vs_human: annotation CSV with two human raters.
-  3. csv_human_vs_llm: annotation CSV with human rater 1 versus LLM columns.
-  4. review_json: JSON exported by review_complex.html or review_simple.html.
-
-By default, the thesis/paper calculation focuses on DS and SC because MG and
-CSC had no useful variance in the v4 generation setting. In review_json mode,
-MG and CSC are also reported as diagnostic checks, while the summary still
-uses DS and SC.
-
 Typical repository usage:
   python scripts/validation/compute_kappa.py \
     --mode review_json \

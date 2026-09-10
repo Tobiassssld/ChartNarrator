@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """Extract the Stage 2 candidate pool from evaluated Stage 1 narratives.
 
-This script is the public-repository version of the original Stage 2 dataset
-exporter. It preserves the original selection logic:
-
 1. Semantic pool:
    - semantic_correctness.score >= 4
    - semantic_correctness.error_type != "critical"
@@ -375,7 +372,7 @@ def parse_args(argv: Optional[List[str]] = None):
         dest="dedup_by_id",
         action="store_true",
         default=True,
-        help="Deduplicate entries by id. This preserves the original default behavior.",
+        help="Deduplicate entries by id. This keeps the configured default behavior.",
     )
     return parser.parse_args(argv)
 

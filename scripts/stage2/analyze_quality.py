@@ -1,10 +1,6 @@
 """
 Analyze Stage 2 judged narrative quality and export training candidate sets.
 
-This public-repository version preserves the original Stage 2 analysis logic:
-quality tiers are based on weighted_average_score and HARD_FLOOR, while training
-exports exclude simple-route entries and anchor_borrowing=True entries.
-
 Inputs:
     data/stage2/evaluated_labels/evaluated_narrative_stage2_0316.json
 

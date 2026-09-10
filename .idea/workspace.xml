@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eedd968-4b3a-41f7-a227-a3b882ac45ab" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/paths.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/paths.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/data_schema.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/data_schema.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pipeline.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pipeline.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/stage1_control/generate_with_external_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/stage1_control/generate_with_external_context.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/stage1_control/judge_context_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/stage1_control/judge_context_comparison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/data/chart_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/data/chart_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/data/clean_cbs_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/data/clean_cbs_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/evaluation/judge_textonly_predictions.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation/judge_textonly_predictions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/evaluation/judge_vlm_predictions.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/evaluation/judge_vlm_predictions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/finetuning/build_text_representations.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/finetuning/build_text_representations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/finetuning/prepare_matched_vlm_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_matched_vlm_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/finetuning/prepare_noanchor_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_noanchor_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/finetuning/prepare_textonly_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_textonly_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/finetuning/prepare_vlm_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/finetuning/prepare_vlm_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage1/analyze_quality.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage1/analyze_quality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage1/extract_anchors.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage1/extract_anchors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage1/generate_narratives.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage1/generate_narratives.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage1/judge_narratives.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage1/judge_narratives.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage2/analyze_quality.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage2/analyze_quality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage2/extract_anchors.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage2/extract_anchors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage2/extract_candidate_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage2/extract_candidate_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage2/filter_candidate_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage2/filter_candidate_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage2/generate_narratives.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage2/generate_narratives.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/stage2/judge_narratives.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/stage2/judge_narratives.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validation/compute_kappa.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validation/compute_kappa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validation/prepare_kappa_review.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validation/prepare_kappa_review.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,18 +42,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Tobiassssld"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Tobiassssld&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Tobiassssld/ChartNarrator.git",
-    "accountId": "ab77ec63-884f-4d2d-8627-4a649fba2b3f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Tobiassssld/ChartNarrator.git&quot;,
+    &quot;accountId&quot;: &quot;ab77ec63-884f-4d2d-8627-4a649fba2b3f&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -36,14 +63,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Tobias/PycharmProjects/ChartNarrator_public/configs",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tobias/PycharmProjects/ChartNarrator_public/configs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tobias\PycharmProjects\ChartNarrator_public\configs" />

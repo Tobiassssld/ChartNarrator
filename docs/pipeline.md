@@ -1,6 +1,6 @@
 # Pipeline
 
-This document gives a compact run order for the ChartNarrator public repository. It is intended as a reproducibility guide, not as a full methodological description. For the research motivation, model comparison, and citation, see `README.md`.
+This document gives a compact run order for the ChartNarrator pipeline. It is intended as a reproducibility guide, not as a full methodological description. For the research motivation, model comparison, and citation, see `README.md`.
 
 ## 1. Assumptions
 

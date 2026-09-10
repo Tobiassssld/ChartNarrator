@@ -2,26 +2,6 @@
 """
 Prepare Stage 2 Kappa review samples and HTML annotation tools.
 
-This public-repository version preserves the original Kappa review sampling
-design. It creates a stratified complex-route review set and a separate
-simple-route review set, copies the corresponding chart images, and writes
-browser-based HTML annotation tools for human verification.
-
-Complex sample:
-    A_ceiling: 20
-    B_midhigh_trend: 10
-    C_midhigh_swing: 10
-    D_midhigh_osc: 10
-    E_midlow: 8
-    F_low: 3
-    G_anchor_borrow: 12
-    H_morph_mismatch: 7
-
-Simple sample:
-    S1_midhigh: 4
-    S2_midlow_upper: 6
-    S3_midlow_floor: 10
-
 Inputs:
     data/stage2/evaluated_labels/evaluated_narrative_stage2_0316.json
     data/images/

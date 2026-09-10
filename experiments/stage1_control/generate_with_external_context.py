@@ -1,13 +1,6 @@
 """
 Generate Stage 1 control-group narratives with external-context allowance.
 
-This experiment keeps the Stage 1 generation setup but uses a control prompt
-that permits temporally compatible external financial or macroeconomic context.
-The public version preserves the original prompt, model name, retry policy,
-topic grouping, debug-mix behavior, output schema, and 15-second inter-request
-sleep by default. Changes are limited to repository paths, credential handling,
-and public-facing comments/messages.
-
 Inputs:
     data/images/
     data/stage1/chart_anchors_stage1.json

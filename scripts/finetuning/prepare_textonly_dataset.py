@@ -1,11 +1,6 @@
 """
 Prepare the Stage 2 text-only ablation dataset.
 
-This script constructs the text-only condition used for the Stage 2 ablation:
-Qwen2.5-7B receives the original prompt, [TIME SERIES DATA], and
-[CHART CONTEXT], but no image field. The split is derived directly from the VLM
-train/validation/test split, preserving the same partition.
-
 Inputs:
     data/finetune_dataset_4_5/train.json
     data/finetune_dataset_4_5/val.json

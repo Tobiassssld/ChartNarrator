@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 """Analyze Stage 1 LLM-as-a-Judge results.
 
-This script aggregates the evaluated Stage 1 narrative files produced by
-judge_narratives.py. It preserves the original scoring, quality-tiering,
-Stage 1 / Stage 2 split construction, reports, and sample-export logic while
-normalizing paths and source text for the public repository.
-
 Inputs:
     data/stage1/evaluated_labels/evaluated_narratives_cbs_*.json
     data/images/*.png

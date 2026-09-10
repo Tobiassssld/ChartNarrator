@@ -2,11 +2,7 @@
 Judge Stage 1 external-context control narratives.
 
 This experiment evaluates Stage 1 control-group outputs generated with an
-external-context allowance. The public version preserves the original Judge
-prompt, three-dimensional Syntactic/Semantic/Pragmatic scoring framework,
-dimension weights, retry policy, debug-file selection, output schema, and
-weighted-average calculation. Changes are limited to repository paths,
-credential handling, and public-facing comments/messages.
+external-context allowance.
 
 Inputs:
     data/experiments/stage1_control/unevaluated_labels/

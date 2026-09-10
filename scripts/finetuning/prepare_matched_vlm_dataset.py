@@ -1,12 +1,6 @@
 """
 Prepare the Stage 2 VLM 4.5 size-matched fine-tuning dataset.
 
-This public-repository version preserves the original matched-dataset logic:
-it loads training_set_4_5.json, pins the VLM 5.0 test split as the shared test
-set, subsamples the remaining 4.5 pool to match VLM 5.0 morphology counts,
-renders [CHART CONTEXT], copies images, and writes train.json, val.json,
-test.json, and split_summary.txt.
-
 Inputs:
     data/stage2/analysis/training_set_4_5.json
     data/stage2/anchors/chart_anchors_stage2_v2_morph_binary.json
